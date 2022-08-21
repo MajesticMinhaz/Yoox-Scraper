@@ -66,13 +66,13 @@ def scraper(product_url: str, serial_number: int) -> None:
 
         product_data = json_template.main_dict()
 
-        if not db.contains(query.ID == str(product_url)):
+        if not db.contains(query.ID.any(query.value == str(product_url))):
             db.insert(product_data)
             url_db.remove(query.url == product_url)
+            print(f"Inserted {product_url}")
         else:
             url_db.remove(query.url == product_url)
-            pass
-        print("complete")
+            print(f"This Product already Exists in Database {product_url}")
     except Exception as ex:
         print(ex)
 
