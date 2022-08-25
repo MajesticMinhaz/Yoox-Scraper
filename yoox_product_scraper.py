@@ -12,7 +12,7 @@ def scraper(product_url: str, serial_number: int) -> None:
         try:
             title = to_dict.get("itemApi")['title']
         except KeyError:
-            title = "Not Found"
+            title = to_dict["itemApi"]["microCategory"]["singleDescription"]
 
         body_html = to_dict["itemApi"]["descriptions"]["ItemDescription"]
         vendor = to_dict.get("itemApi")["brand"]["name"]
