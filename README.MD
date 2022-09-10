@@ -1,4 +1,4 @@
-<p align="center"><img src="https://img.shields.io/badge/Version-1.0.2-blue"></p>
+<p align="center"><img src="https://img.shields.io/badge/Version-1.0.3-blue"></p>
 <p align="center">
   <a href="https://github.com/mdminhaz2003">
     <img src="https://img.shields.io/github/followers/mdminhaz2003?label=Follow&style=social">
