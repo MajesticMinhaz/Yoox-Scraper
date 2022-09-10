@@ -43,7 +43,7 @@ if __name__ == '__main__':
     to_page = int(config['END_PAGE'])
 
     for page_number in range(from_page, to_page + 1):
-        url = f"{config['PAGE_URL']}{page_number}"
+        url = config["PAGE_URL"].replace("{}", str(page_number))
         try:
             product_info_scraper(url, page_number)
         except Exception as exception:
